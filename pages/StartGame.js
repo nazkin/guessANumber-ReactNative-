@@ -37,7 +37,7 @@ const  StartGame= (props) => {
         confirmedValue = (<Card style={styles.startContainer}>
                             <Text style={styles.startText}>You selected </Text> 
                             <NumberDisplay number={selectedValue} />
-                                <Button title="Go!"/>   
+                                <Button title="Go!" onPress={()=> props.startGame(selectedValue)}/>   
                         </Card>)
     }
 const { screen, title, startButtons, inputContainer, inputCustom } = styles
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
      flex: 1,
      padding: 10,
      alignItems: 'center',
-     marginVertical:15
+     backgroundColor: '#dcdcdc'
   },
   title:{
     fontSize: 20,
